@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Income Tax Calculator</title>
+    <link rel="stylesheet" href="CSS/style.css" />
+    <script src="https://kit.fontawesome.com/0b1154eb8d.js" crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+    <div class="container">
+      <form id="incomeForm" class="form">
+        <fieldset id="form-area">
+            <div class="form-group">
+
+                <!-- Enter gross income -->
+                <label for="grossIncome"><b>Enter gross income </b><i class="fa-regular fa-circle-question hover-icon">
+                    <span class="tooltip-text">Gross annual income is your total salary in a year before any deductions</span></i></label>
+                <input type="text" id="grossIncome" name="grossIncome" placeholder="Enter Gross Income" required/>
+            </div>
+            <div class="form-group"> 
+
+                <!-- enter extra income -->
+                <label for="extraIncome"><b>Enter extra income </b><i class="fa-regular fa-circle-question hover-icon">
+                    <span class="tooltip-text">Extra income is your extra earnings or commission that you earn in a year</span></i></label>  
+                <input type="text" id="extraIncome" name="extraIncome" placeholder="Enter Extra Income" required/>
+            </div>
+            <div class="form-group">
+
+                <!-- enter your age -->
+                <label for="age"><b>Enter your age </b><i class="fa-regular fa-circle-question hover-icon">
+                    <span class="tooltip-text">A period of human life, measured by years from birth. Count your age from birth.</span></i></label>
+                <input type="number" id="age" name="age" placeholder="" required />
+            </div>
+            <div class="form-group">
+
+                <!-- enter total applicable deductions -->
+                <label for="deductions"><b>Enter total applicable deductions </b><i class="fa-regular fa-circle-question hover-icon">
+                    <span class="tooltip-text">Enter the amount that is applicable to be deducted from your income.</span></i></label>
+                <input type="text" id="deductions" name="deductions" placeholder="Add Total Applicable Deductions" required/>
+            </div>
+
+            <!-- submit button -->
+            <button type="submit">Submit</button>
+        </fieldset>
+      </form>
+    </div>
+
+
+    <!-- Result dialog box -->
+    <div id="dialog" class="dialog">
+      <div class="dialog-content">
+        <h2>Your overall income will be</h2>
+        <h2 id="incomeResult"></h2>
+        <p>after tax deductions</p>
+        <button class="close"><b>close</b></button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
